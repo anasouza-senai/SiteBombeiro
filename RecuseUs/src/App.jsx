@@ -1,20 +1,16 @@
 import React from 'react'
-import CardRecursos from './components/CardRecursos'
-
+import "./App.css";
 
 const App = () => {
   return (
-    <div className='align-items-center'>
-
-      <h2>Recursos Essenciais</h2>
+    <div className='blocoAtua'>
+      <h2 >Recursos Essenciais</h2>
       <p >Ferramentas desenvolvidas especialmente para as necessidades dos
       bombeiros em campo</p>
-      <CardRecursos
-      />
-      <h2>Recursos Essenciais</h2>
+      <h2>Confiado por profissionais</h2>
       <p>Veja o que os bombeiros de todo o Brasil estão dizendo.</p>
-
     </div>
+
   )
 }
 

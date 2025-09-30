@@ -3,3 +3,10 @@
     height: 200;
     width: 200;
 }
+
+.blocoAtua {
+    background: var(--pastel-pink-90);
+    border-radius: 20px 8px 20px 8px;
+    box-shadow: 4px 4px 0px 0px #002147;
+    width: 220px;
+}
