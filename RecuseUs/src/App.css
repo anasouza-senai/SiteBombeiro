@@ -1,16 +1,14 @@
-/* .organizando {
+.titulos-centrais {
     display: flex;
     flex-direction: column;
     align-items: center;     
     justify-content: center;
-    text-align: center;
-    height: 100vh;  
-    width: 100%;   
-}; */
+    text-align: center; 
+}
 
 .caixa-re {
     width: 300px;
-    height: 200px;
+    height: 210px;
     background-color: var(--pastel-orange-100);
     border-radius: 10px;
     padding: 20px;
@@ -18,7 +16,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
     /* Suavidade da animação */
@@ -36,11 +34,11 @@
   height: 50px;         
   background-color: var(--pastel-orange-200);
   border-radius: 100%;    
-  margin: auto;
   
   display: flex;         
   justify-content: center;
   align-items: center;  
+  margin-bottom: 15px;
 }
 
 .circulo i {
@@ -48,17 +46,36 @@
     color: var(--pastel-yellow-900);
 }
 
+.caixa-re h5 {
+    margin: 0 0 10px 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
+}
+
+.caixa-re p {
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.3;
+}
+
 .caixas-container {
   display: flex;
   justify-content: center;   
   align-items: flex-start;  
   gap: 10px;             
-  flex-wrap: wrap;        
+  flex-wrap: wrap;
+  margin: 20px 0;
 }
 
 .caixa-cp {
     width: 300px;
-    height: 200px;
+    height: 210px;
     background-color: var(--pastel-orange-100);
     border-radius: 10px;
     padding: 20px;
@@ -78,4 +95,6 @@
 
 .cinco-estrelas {
     color: var(--pastel-yellow-900);
+    display: flex;
+    gap: 5px; 
 }

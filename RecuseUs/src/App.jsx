@@ -10,13 +10,15 @@ import CaixasCP from "./components/CaixasCP";
 const App = () => {
   
   return (
-    <div className="">
+    <div>
 
+      <div className="titulos-centrais mt-5">
       <h1>Recursos Essenciais</h1>
       <p className="w-25">
         Ferramentas desenvolvidas especialmente para as necessidades dos
         bombeiros em campo
       </p>
+      </div>
 
       <div className="caixas-container " id="caixasRE">
       <CaixasRE
@@ -36,10 +38,12 @@ const App = () => {
       />
       </div>
 
+      <div className="titulos-centrais mt-5">
       <h1>Confiado por profissionais</h1>
       <p className="w-25">
         Veja o que os bombeiros de todo o Brasil estão dizendo.
       </p>
+      </div>
 
       <div className="caixas-container " id="caixasCP">
       <CaixasCP
