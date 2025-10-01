@@ -1,11 +1,12 @@
 import React from 'react'
 
-const CaixasRE = () => {
+const CaixasRE = (props) => {
+
   return (
    <div className='caixa-re'>
-      <div><i class="bi bi-wifi"></i></div>
-      <h4>Extensão de Rede Wi-Fi</h4>
-      <p>Amplie a cobertura de rede em operações de emergência para melhor comunicação entre equipes.</p>
+      <div className='circulo'>{props.iconCRE}</div>
+      <h5>{props.subtituloCRE}</h5>
+      <p>{props.textoCRE}</p>
    </div>
   )
 }
