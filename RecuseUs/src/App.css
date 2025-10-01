@@ -1,12 +1,31 @@
-.cardRecursos {
-    background-color: "#F7F4EA";
-    height: 200;
-    width: 200;
+/* .organizando {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     
+    justify-content: center;
+    text-align: center;
+    height: 100vh;  
+    width: 100%;   
+}; */
+
+.caixa-re {
+    width: 400px;
+    height: 250px;
+    background-color: var(--pastel-orange-100);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Suavidade da animação */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.blocoAtua {
-    background: var(--pastel-pink-90);
-    border-radius: 20px 8px 20px 8px;
-    box-shadow: 4px 4px 0px 0px #002147;
-    width: 220px;
+.caixa-re:hover {
+    transform: translateY(-10px); /* Sobe a caixa */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra mais forte */
 }

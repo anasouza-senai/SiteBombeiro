@@ -189,8 +189,7 @@ $all-custom-colors
 
 }
 
-[*data-bs-theme*="dark"] {
+[data-bs-theme="dark"] {
 
---bs-body-bg: var(--teal-500) !important;
-
+    --bs-body-bg: var(--teal-500) !important;
 }
