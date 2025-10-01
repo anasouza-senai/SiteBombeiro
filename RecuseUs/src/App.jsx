@@ -19,92 +19,69 @@ import CaixasCP from "./components/CaixasCP";
 
 const App = () => {
   return (
-    <div className="container">
-      <header className="header">
-        <div className="logo-container">
-          <img src={LogoDark} alt="Rescue US Logo" className="logo" />                                                                                                                                                                                                                                          
-        </div>
-        <p className="description">
-          O aplicativo definitivo para profissionais de emergência. Conecte
-          equipes, gerencie operações e salve vidas com tecnologia de ponta.
-        </p>
-        <div className="download-buttons">
-          <button className="button android-button">
-            <FaAndroid className="icon" /> Baixar para Android
-          </button>
-          <button className="button ios-button">
-            <FaApple className="icon" /> Baixar para iOS
-          </button>
-        </div>
-        <div className="features">
-          <div className="feature-item">
-            <FaRegCheckCircle className="check-icon" /> Gratuito
+    <div>
+      <div className="hero-section mt-5">
+        <header className="header">
+          <div className="logo-container">
+            <img src={LogoDark} alt="Rescue US Logo" className="logo" />                                                                                                                                                                                                                                          
           </div>
-          <div className="feature-item">
-            <FaRegCheckCircle className="check-icon" /> Sem anúncios
+          <p className="description">
+            O aplicativo definitivo para profissionais de emergência. Conecte
+            equipes, gerencie operações e salve vidas com tecnologia de ponta.
+          </p>
+          <div className="download-buttons">
+            <button className="button android-button">
+              <FaAndroid className="icon" /> Baixar para Android
+            </button>
+            <button className="button ios-button">
+              <FaApple className="icon" /> Baixar para iOS
+            </button>
           </div>
-          <div className="feature-item">
-            <FaRegCheckCircle className="check-icon" /> Suporte 100%
+          <div className="features">
+            <div className="feature-item">
+              <FaRegCheckCircle className="check-icon" /> Gratuito
+            </div>
+            <div className="feature-item">
+              <FaRegCheckCircle className="check-icon" /> Sem anúncios
+            </div>
+            <div className="feature-item">
+              <FaRegCheckCircle className="check-icon" /> Suporte 100%
+            </div>
           </div>
-        </div>
-      </header>
+        </header>
 
-      <div className="stats-section">
-        <div className="stat-item">
-          <h2>10K+</h2>
-          <p>Bombeiros Ativos</p>
+        <div className="stats-section">
+          <div className="stat-item">
+            <h2>10K+</h2>
+            <p>Bombeiros Ativos</p>
+          </div>
+          <div className="stat-item">
+            <h2>50K+</h2>
+            <p>Vidas Salvas</p>
+          </div>
+          <div className="stat-item">
+            <h2>100%</h2>
+            <p>Uptime</p>
+          </div>
+          <div className="stat-item">
+            <h2>100%</h2>
+            <p>Suporte</p>
+          </div>
         </div>
-        <div className="stat-item">
-          <h2>50K+</h2>
-          <p>Vidas Salvas</p>
-        </div>
-        <div className="stat-item">
-          <h2>100%</h2>
-          <p>Uptime</p>
-        </div>
-        <div className="stat-item">
-          <h2>100%</h2>
-          <p>Suporte</p>
-        </div>
-        </div>
+      </div>
         
 
       <div>
 
       <div className="titulos-centrais mt-5">
-      <h1>Confiado por profissionais</h1>
-      <p className="w-25">
-        Veja o que os bombeiros de todo o Brasil estão dizendo.
-      </p>
-      </div>
-
-      <div className="caixas-container " id="caixasCP">
-      <CaixasCP
-      textoCCP="“O app revolucionou nossa comunicação em campo. A extensão Wi-Fi salvou vidas em operações complexas.” "
-      bombeiroCCP="Capitão Silva"
-      lugarCCP="Corpo de Bombeiros - SP"
-      />
-      <CaixasCP
-      textoCCP="“Interface intuitiva e recursos essenciais. O histórico nso ajuda muito  no planejamento de operações.”"
-      bombeiroCCP="Sargento Costa"
-      lugarCCP="Bombeiros Voluntários - RJ"
-      />
-      <CaixasCP
-      textoCCP="“Primeiros socorros sempre à mão. Indispensável para qualquer profissional de emergência.”"
-      bombeiroCCP="Tenente Oliveira"
-      lugarCCP="Corpo de Bombeiros - MG"
-      />
-      </div>
-
-      <div className="titulos-centrais mt-5">
       <h1>Recursos Essenciais</h1>
-      <p className="w-25">
+      <p className="w-50">
         Ferramentas desenvolvidas especialmente para as necessidades dos
         bombeiros em campo
       </p>
       </div>
 
-      <div className="caixas-container " id="caixasRE">
+      <div className="caixas-container" id="caixasRE">
       <CaixasRE
       subtituloCRE="Extensão de Rede Wi-Fi"
       textoCRE="Amplie a cobertura de rede em operações de emergência para melhor comunicação entre equipes."
@@ -121,7 +98,34 @@ const App = () => {
       iconCRE={<i class="bi bi-heart"></i>}
       />
       </div>
+
+      <div className="titulos-centrais mt-5">
+      <h1>Confiado por profissionais</h1>
+      <p className="w-50">
+        Veja o que os bombeiros de todo o Brasil estão dizendo.
+      </p>
       </div>
+
+      <div className="caixas-container mb-5" id="caixasCP">
+      <CaixasCP
+      textoCCP="“O app revolucionou nossa comunicação em campo. A extensão Wi-Fi salvou vidas em operações complexas.” "
+      bombeiroCCP="Capitão Silva"
+      lugarCCP="Corpo de Bombeiros - SP"
+      />
+      <CaixasCP
+      textoCCP="“Interface intuitiva e recursos essenciais. O histórico nso ajuda muito  no planejamento de operações.”"
+      bombeiroCCP="Sargento Costa"
+      lugarCCP="Bombeiros Voluntários - RJ"
+      />
+      <CaixasCP
+      textoCCP="“Primeiros socorros sempre à mão. Indispensável para qualquer profissional de emergência.”"
+      bombeiroCCP="Tenente Oliveira"
+      lugarCCP="Corpo de Bombeiros - MG"
+      />
+      </div>
+      
+      </div>
+
 
       <div className="cta-section" style={{ backgroundImage: `url(${faixa})` }}>
         <h2 className="cta-title">Pronto para Salvar Mais Vidas?</h2>
@@ -136,6 +140,9 @@ const App = () => {
         <p className="cta-info">
           Disponível para Android e IOS • Sem custos • Suporte completo
         </p>
+
+    </div>
+
 
       <footer className="footer-container">
         <div className="footer-main-content">
@@ -202,7 +209,7 @@ const App = () => {
           2025 Recuse US • Todos os direitos reservados
         </div>
       </footer>
-    </div>
+
     </div>
   );
 };

@@ -25,11 +25,20 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
 }
+
+/* .inicio {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
 
 #root {
   width: 100%;
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,10 +50,20 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  overflow-x: hidden;
+}
+
+.hero-section {
+  width: 100%;
+  padding: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .header {
-  padding: 5rem 2rem 3rem; 
+  padding: 2rem 2rem 1rem; 
   text-align: center;
   max-width: 800px;
 }
@@ -243,7 +262,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 8rem; 
-  padding: 4rem 0;
+  padding: 2rem 0;
 }
 
 .stat-item {
@@ -266,7 +285,8 @@ body {
   margin: 0;
 }
 .cta-section {
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
   padding: 6rem 1rem;
   text-align: center;
   color: white;
