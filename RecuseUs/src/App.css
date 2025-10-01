@@ -263,6 +263,7 @@ body {
   justify-content: center;
   gap: 8rem; 
   padding: 2rem 0;
+  margin: 4rem 0; /* espaçamento externo em cima e embaixo */
 }
 
 .stat-item {
