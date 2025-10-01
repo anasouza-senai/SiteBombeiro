@@ -9,9 +9,7 @@ import {
   FaExclamationTriangle, 
 } from "react-icons/fa";
 
-function App() {
 import React from "react";
-import "./App.css";
 import "./scss/styles.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -20,7 +18,6 @@ import CaixasRE from "./components/CaixasRE";
 import CaixasCP from "./components/CaixasCP";
 
 const App = () => {
-  
   return (
     <div className="container">
       <header className="header">
@@ -69,7 +66,35 @@ const App = () => {
           <h2>100%</h2>
           <p>Suporte</p>
         </div>
-    <div>
+        </div>
+        
+
+      <div>
+
+      <div className="titulos-centrais mt-5">
+      <h1>Confiado por profissionais</h1>
+      <p className="w-25">
+        Veja o que os bombeiros de todo o Brasil estão dizendo.
+      </p>
+      </div>
+
+      <div className="caixas-container " id="caixasCP">
+      <CaixasCP
+      textoCCP="“O app revolucionou nossa comunicação em campo. A extensão Wi-Fi salvou vidas em operações complexas.” "
+      bombeiroCCP="Capitão Silva"
+      lugarCCP="Corpo de Bombeiros - SP"
+      />
+      <CaixasCP
+      textoCCP="“Interface intuitiva e recursos essenciais. O histórico nso ajuda muito  no planejamento de operações.”"
+      bombeiroCCP="Sargento Costa"
+      lugarCCP="Bombeiros Voluntários - RJ"
+      />
+      <CaixasCP
+      textoCCP="“Primeiros socorros sempre à mão. Indispensável para qualquer profissional de emergência.”"
+      bombeiroCCP="Tenente Oliveira"
+      lugarCCP="Corpo de Bombeiros - MG"
+      />
+      </div>
 
       <div className="titulos-centrais mt-5">
       <h1>Recursos Essenciais</h1>
@@ -78,20 +103,6 @@ const App = () => {
         bombeiros em campo
       </p>
       </div>
-
-      <div className="cta-section" style={{ backgroundImage: `url(${faixa})` }}>
-        <h2 className="cta-title">Pronto para Salvar Mais Vidas?</h2>
-        <p className="cta-subtitle">
-          Junte-se a milhares de bombeiros que já utilizam o Chamar SOS
-        </p>
-
-        <button className="cta-button">
-          <FaDownload className="icon" /> Baixar Agora - Grátis
-        </button>
-
-        <p className="cta-info">
-          Disponível para Android e IOS • Sem custos • Suporte completo
-        </p>
 
       <div className="caixas-container " id="caixasRE">
       <CaixasRE
@@ -110,6 +121,22 @@ const App = () => {
       iconCRE={<i class="bi bi-heart"></i>}
       />
       </div>
+      </div>
+
+      <div className="cta-section" style={{ backgroundImage: `url(${faixa})` }}>
+        <h2 className="cta-title">Pronto para Salvar Mais Vidas?</h2>
+        <p className="cta-subtitle">
+          Junte-se a milhares de bombeiros que já utilizam o Chamar SOS
+        </p>
+
+        <button className="cta-button">
+          <FaDownload className="icon" /> Baixar Agora - Grátis
+        </button>
+
+        <p className="cta-info">
+          Disponível para Android e IOS • Sem custos • Suporte completo
+        </p>
+
       <footer className="footer-container">
         <div className="footer-main-content">
           <div className="footer-col logo-col">
@@ -176,37 +203,8 @@ const App = () => {
         </div>
       </footer>
     </div>
-  );
-}
-
-      <div className="titulos-centrais mt-5">
-      <h1>Confiado por profissionais</h1>
-      <p className="w-25">
-        Veja o que os bombeiros de todo o Brasil estão dizendo.
-      </p>
-      </div>
-
-      <div className="caixas-container " id="caixasCP">
-      <CaixasCP
-      textoCCP="“O app revolucionou nossa comunicação em campo. A extensão Wi-Fi salvou vidas em operações complexas.” "
-      bombeiroCCP="Capitão Silva"
-      lugarCCP="Corpo de Bombeiros - SP"
-      />
-      <CaixasCP
-      textoCCP="“Interface intuitiva e recursos essenciais. O histórico nso ajuda muito  no planejamento de operações.”"
-      bombeiroCCP="Sargento Costa"
-      lugarCCP="Bombeiros Voluntários - RJ"
-      />
-      <CaixasCP
-      textoCCP="“Primeiros socorros sempre à mão. Indispensável para qualquer profissional de emergência.”"
-      bombeiroCCP="Tenente Oliveira"
-      lugarCCP="Corpo de Bombeiros - MG"
-      />
-      </div>
-
     </div>
   );
 };
 
-export default App;
 export default App;
