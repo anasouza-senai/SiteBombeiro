@@ -5,11 +5,11 @@ const CaixasCP = (props) => {
    <div className='caixa-cp'>
 
       <div className='cinco-estrelas mb-2'>
-      <i class="bi bi-star-fill"></i>
-      <i class="bi bi-star-fill"></i>
-      <i class="bi bi-star-fill"></i>
-      <i class="bi bi-star-fill"></i>
-      <i class="bi bi-star-fill"></i>
+      <i className="bi bi-star-fill"></i>
+      <i className="bi bi-star-fill"></i>
+      <i className="bi bi-star-fill"></i>
+      <i className="bi bi-star-fill"></i>
+      <i className="bi bi-star-fill"></i>
       </div>
 
       <p className='mb-4'>{props.textoCCP}</p>

@@ -7,20 +7,19 @@ import {
   FaAndroid,
   FaRegCheckCircle,
   FaDownload,
-  FaExclamationTriangle, 
+  FaExclamationTriangle,
 } from "react-icons/fa";
 
 import React, { useState } from "react";
 import "./scss/styles.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
-import 'bootstrap-icons/font/bootstrap-icons.css';
+import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
 import CaixasRE from "./components/CaixasRE";
 import CaixasCP from "./components/CaixasCP";
 import BotaoTrocaCor from "./components/botaoTrocaCor/BotaoTrocaCor";
 
 const App = () => {
-
   const [isLight, setIsLight] = useState(true);
 
   const troca = () => {
@@ -28,13 +27,17 @@ const App = () => {
   };
 
   return (
-    <div  id="App" className={isLight ? "light" : ""}>
-      <div className="hero-section mt-5">
+    <div id="App" className={isLight ? "light" : "dark"}>
+      <div className="hero-section pt-5">
         <header className="header">
           <div className="logo-container">
-            <img src={isLight ? LogoDark : LogoLight} alt="Rescue US Logo" className="logo" /> 
+            <img
+              src={isLight ? LogoDark : LogoLight}
+              alt="Rescue US Logo"
+              className="logo"
+            />
           </div>
-            <BotaoTrocaCor  troca={troca} isLight={isLight} />                                                                                                                                                                                                                                         
+          <BotaoTrocaCor troca={troca} isLight={isLight} />
           <p className="description mt-4">
             O aplicativo definitivo para profissionais de emergência. Conecte
             equipes, gerencie operações e salve vidas com tecnologia de ponta.
@@ -79,63 +82,59 @@ const App = () => {
           </div>
         </div>
       </div>
-        
 
       <div>
+        <div className="titulos-centrais mt-5">
+          <h1>Recursos Essenciais</h1>
+          <p className="w-50">
+            Ferramentas desenvolvidas especialmente para as necessidades dos
+            bombeiros em campo
+          </p>
+        </div>
 
-      <div className="titulos-centrais mt-5">
-      <h1>Recursos Essenciais</h1>
-      <p className="w-50">
-        Ferramentas desenvolvidas especialmente para as necessidades dos
-        bombeiros em campo
-      </p>
-      </div>
+        <div className="caixas-container" id="caixasRE">
+          <CaixasRE
+            subtituloCRE="Extensão de Rede Wi-Fi"
+            textoCRE="Amplie a cobertura de rede em operações de emergência para melhor comunicação entre equipes."
+            iconCRE={<i className="bi bi-wifi"></i>}
+          />
+          <CaixasRE
+            subtituloCRE="Histórico de Ocorrências"
+            textoCRE="Mantenha registro completo de todas as operações realizadas com dados detalhados."
+            iconCRE={<i className="bi bi-clock-history"></i>}
+          />
+          <CaixasRE
+            subtituloCRE="Primeiros Socorros"
+            textoCRE="Acesso rápido a procedimentos de emergências com instruções passo-a-passo."
+            iconCRE={<i className="bi bi-heart"></i>}
+          />
+        </div>
 
-      <div className="caixas-container" id="caixasRE">
-      <CaixasRE
-      subtituloCRE="Extensão de Rede Wi-Fi"
-      textoCRE="Amplie a cobertura de rede em operações de emergência para melhor comunicação entre equipes."
-      iconCRE={<i className='bi bi-wifi'></i>}
-      />
-      <CaixasRE
-      subtituloCRE="Histórico de Ocorrências"
-      textoCRE="Mantenha registro completo de todas as operações realizadas com dados detalhados."
-      iconCRE={<i class="bi bi-clock-history"></i>}
-      />
-      <CaixasRE
-      subtituloCRE="Primeiros Socorros"
-      textoCRE="Acesso rápido a procedimentos de emergências com instruções passo-a-passo."
-      iconCRE={<i class="bi bi-heart"></i>}
-      />
-      </div>
+        <div className="titulos-centrais mt-5">
+          <h1>Confiado por profissionais</h1>
+          <p className="w-50">
+            Veja o que os bombeiros de todo o Brasil estão dizendo.
+          </p>
+        </div>
 
-      <div className="titulos-centrais mt-5">
-      <h1>Confiado por profissionais</h1>
-      <p className="w-50">
-        Veja o que os bombeiros de todo o Brasil estão dizendo.
-      </p>
+        <div className="caixas-container mb-5" id="caixasCP">
+          <CaixasCP
+            textoCCP="“O app revolucionou nossa comunicação em campo. A extensão Wi-Fi salvou vidas em operações complexas.” "
+            bombeiroCCP="Capitão Silva"
+            lugarCCP="Corpo de Bombeiros - SP"
+          />
+          <CaixasCP
+            textoCCP="“Interface intuitiva e recursos essenciais. O histórico nso ajuda muito  no planejamento de operações.”"
+            bombeiroCCP="Sargento Costa"
+            lugarCCP="Bombeiros Voluntários - RJ"
+          />
+          <CaixasCP
+            textoCCP="“Primeiros socorros sempre à mão. Indispensável para qualquer profissional de emergência.”"
+            bombeiroCCP="Tenente Oliveira"
+            lugarCCP="Corpo de Bombeiros - MG"
+          />
+        </div>
       </div>
-
-      <div className="caixas-container mb-5" id="caixasCP">
-      <CaixasCP
-      textoCCP="“O app revolucionou nossa comunicação em campo. A extensão Wi-Fi salvou vidas em operações complexas.” "
-      bombeiroCCP="Capitão Silva"
-      lugarCCP="Corpo de Bombeiros - SP"
-      />
-      <CaixasCP
-      textoCCP="“Interface intuitiva e recursos essenciais. O histórico nso ajuda muito  no planejamento de operações.”"
-      bombeiroCCP="Sargento Costa"
-      lugarCCP="Bombeiros Voluntários - RJ"
-      />
-      <CaixasCP
-      textoCCP="“Primeiros socorros sempre à mão. Indispensável para qualquer profissional de emergência.”"
-      bombeiroCCP="Tenente Oliveira"
-      lugarCCP="Corpo de Bombeiros - MG"
-      />
-      </div>
-      
-      </div>
-
 
       <div className="cta-section" style={{ backgroundImage: `url(${faixa})` }}>
         <h2 className="cta-title">Pronto para Salvar Mais Vidas?</h2>
@@ -150,15 +149,17 @@ const App = () => {
         <p className="cta-info">
           Disponível para Android e IOS • Sem custos • Suporte completo
         </p>
-
-    </div>
-
+      </div>
 
       <footer className="footer-container">
         <div className="footer-main-content">
           <div className="footer-col logo-col">
             <div className="footer-logo-container">
-              <img src={isLight ? LogoDark : LogoLight} alt="RESCUE US Logo" className="logo" />
+              <img
+                src={isLight ? LogoDark : LogoLight}
+                alt="RESCUE US Logo"
+                className="logo"
+              />
             </div>
             <p className="footer-description">
               Tecnologia de serviço da vida.
@@ -219,7 +220,6 @@ const App = () => {
           2025 Recuse US • Todos os direitos reservados
         </div>
       </footer>
-
     </div>
   );
 };
