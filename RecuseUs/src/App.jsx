@@ -1,5 +1,6 @@
 import "./App.css";
 import LogoDark from "./assets/LogoDark.png";
+import LogoLight from "./assets/LogoLight.png";
 import faixa from "./assets/faixa.jpg";
 import {
   FaApple,
@@ -9,23 +10,32 @@ import {
   FaExclamationTriangle, 
 } from "react-icons/fa";
 
-import React from "react";
+import React, { useState } from "react";
 import "./scss/styles.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import "bootstrap/dist/js/bootstrap.bundle.js";
 import CaixasRE from "./components/CaixasRE";
 import CaixasCP from "./components/CaixasCP";
+import BotaoTrocaCor from "./components/botaoTrocaCor/BotaoTrocaCor";
 
 const App = () => {
+
+  const [isLight, setIsLight] = useState(true);
+
+  const troca = () => {
+    setIsLight(!isLight);
+  };
+
   return (
-    <div>
+    <div  id="App" className={isLight ? "light" : ""}>
       <div className="hero-section mt-5">
         <header className="header">
           <div className="logo-container">
-            <img src={LogoDark} alt="Rescue US Logo" className="logo" />                                                                                                                                                                                                                                          
+            <img src={isLight ? LogoDark : LogoLight} alt="Rescue US Logo" className="logo" /> 
           </div>
-          <p className="description">
+            <BotaoTrocaCor  troca={troca} isLight={isLight} />                                                                                                                                                                                                                                         
+          <p className="description mt-4">
             O aplicativo definitivo para profissionais de emergência. Conecte
             equipes, gerencie operações e salve vidas com tecnologia de ponta.
           </p>
@@ -148,7 +158,7 @@ const App = () => {
         <div className="footer-main-content">
           <div className="footer-col logo-col">
             <div className="footer-logo-container">
-              <img src={LogoDark} alt="RESCUE US Logo" className="logo" />
+              <img src={isLight ? LogoDark : LogoLight} alt="RESCUE US Logo" className="logo" />
             </div>
             <p className="footer-description">
               Tecnologia de serviço da vida.

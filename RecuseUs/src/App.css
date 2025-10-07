@@ -3,20 +3,69 @@
     flex-direction: column;
     align-items: center;     
     justify-content: center;
-    text-align: center; 
+    text-align: center;
 }
 
-:root {
+.titulos-centrais h1 {
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.titulos-centrais p {
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+}:root {
+  /* Fontes e renderização */
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color-scheme: light;
-  color: #242424;
-  background-color: #ffffff;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Cores e variáveis padrão (modo escuro) */
+  color-scheme: light dark;
+  --background-color: #353635;
+  --text-color: #ffffff;
+  --text-secondary: #cccccc;
+  --surface-color: #1a1a1a;
+  --border-color: #ffffff; 
+  --card-background: #585A55;
+  --button-primary: #b50000;
+  --button-secondary: #353635;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --botao-debaixo: #585A55;
+  --text-botaodebaixo: #ffffff;
+  
+  /* Variáveis do switch */
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color-switch: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.5);
+  --switch-bg-url: url(./img/MoonStars.svg);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Tema claro */
+.light {
+  --background-color: #ffffff;
+  --text-color: #242424;
+  --text-secondary: #666666;
+  --surface-color: #f8f9fa;
+  --border-color: #000000;
+  --card-background: #F7F4EA;
+  --button-primary: #b50000;
+  --button-secondary: #ffff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --botao-debaixo: #ffffff;
+  --text-botaodebaixo: #000000;
+  
+  /* Variáveis do switch */
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color-switch: rgba(0, 0, 0, 0.1);
+  --surface-color-hover: rgba(0, 0, 0, 0.5);
+  --switch-bg-url: url(./img/Sun.svg);
+  --highlight-color: rgba(0, 0, 0, 0.2);
 }
 
 body {
@@ -26,16 +75,10 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-
-/* .inicio {
-  width: 100%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-} */
 
 #root {
   width: 100%;
@@ -43,6 +86,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: var(--background-color);
 }
 
 .container {
@@ -78,25 +122,27 @@ body {
 .caixa-re {
     width: 300px;
     height: 210px;
-    background-color: var(--pastel-orange-100);
+    background-color: var(--card-background);
+    border: 1px solid var(--card-background);
     border-radius: 10px;
     padding: 20px;
     margin: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px var(--shadow-color);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     text-align: center;
+    color: var(--text-color);
     /* Suavidade da animação */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
     font-size: smaller;
 }
 
 .logo {
   height: 5em;
   will-change: filter;
-  transition: filter 300ms;
+  transition: filter 300ms, opacity 0.3s ease;
   margin-bottom: 0.5rem;
 }
 
@@ -156,15 +202,17 @@ body {
 .caixa-cp {
     width: 300px;
     height: 210px;
-    background-color: var(--pastel-orange-100);
+    background-color: var(--card-background);
+    border: 1px solid var(--card-background);
     border-radius: 10px;
     padding: 20px;
     margin: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px var(--shadow-color);
     display: flex;
     flex-direction: column;
+    color: var(--text-color);
     /* Suavidade da animação */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
     font-size: smaller;
 }
 
@@ -184,12 +232,12 @@ body {
   font-weight: 500;
   letter-spacing: 0.2em;
   margin: 0;
-  color: #000;
+  color: var(--text-color);
 }
 
 .description {
   font-size: 1.25rem;
-  color: #666;
+  color: var(--text-secondary);
   margin: 0 0 1.5rem;
   max-width: 600px;
 }
@@ -225,13 +273,13 @@ body {
 }
 
 .ios-button {
-  background-color: transparent;
-  color: #000;
-  border-color: #ccc;
+  background-color: var(--button-secondary);
+  color: var(--text-color);
+  border-color: var(--border-color);
 }
 
 .ios-button:hover {
-  background-color: #f0f0f0;
+  background-color: var(--surface-color);
 }
 
 .icon {
@@ -282,7 +330,7 @@ body {
 
 .stat-item p {
   font-size: 1rem;
-  color: #242424;
+  color: var(--text-secondary);
   margin: 0;
 }
 .cta-section {
@@ -320,8 +368,8 @@ body {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  background-color: white;
-  color: #000;
+  background-color: var(--botao-debaixo);
+  color: var(--text-botaodebaixo);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -345,8 +393,8 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 4rem 2rem 1.5rem;
-  background-color: white;
-  color: #333;
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .footer-main-content {
@@ -383,13 +431,13 @@ body {
 .logo-text {
   font-size: 1.6rem;
   font-weight: bold;
-  color: #333;
+  color: var(--text-color);
   letter-spacing: normal;
 }
 
 .footer-description {
   font-size: 0.95rem;
-  color: #666;
+  color: var(--text-secondary);
   line-height: 1.4;
   text-align: left;
 }
@@ -398,7 +446,7 @@ body {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 1.2rem;
-  color: #000;
+  color: var(--text-color);
 }
 
 .footer-links {
@@ -413,7 +461,7 @@ body {
 
 .footer-links a {
   text-decoration: none;
-  color: #333;
+  color: var(--text-secondary);
   font-size: 1rem;
   transition: color 0.2s;
 }
@@ -448,7 +496,7 @@ body {
 
 .emergency-note {
   font-size: 0.8rem;
-  color: #666;
+  color: var(--text-secondary);
   line-height: 1.4;
   max-width: 250px;
   margin-left: 2.6rem;
@@ -457,9 +505,9 @@ body {
 .footer-copyright {
   text-align: center;
   font-size: 0.9rem;
-  color: #666;
+  color: var(--text-secondary);
   padding-top: 1.5rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--border-color);
   margin-top: 1rem;
 }
 
