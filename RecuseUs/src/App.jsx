@@ -20,11 +20,11 @@ import CaixasCP from "./components/CaixasCP";
 import BotaoTrocaCor from "./components/botaoTrocaCor/BotaoTrocaCor";
 
 const App = () => {
-  const [isLight, setIsLight] = useState(true);
+  const [isLight, setIsLight] = useState(false)
 
-  const troca = () => {
-    setIsLight(!isLight);
-  };
+const troca =() => {
+  setIsLight (!isLight)
+}
 
   return (
     <div id="App" className={isLight ? "light" : "dark"}>
@@ -37,7 +37,7 @@ const App = () => {
               className="logo"
             />
           </div>
-          <BotaoTrocaCor troca={troca} isLight={isLight} />
+          <BotaoTrocaCor troca={troca} isLight={isLight}/>
           <p className="description mt-4">
             O aplicativo definitivo para profissionais de emergência. Conecte
             equipes, gerencie operações e salve vidas com tecnologia de ponta.
