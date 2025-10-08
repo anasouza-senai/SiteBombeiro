@@ -8,7 +8,7 @@
     height: 32px;
     border-radius: 50%;
     border: 0;
-    background: #fff var(--switch-bg-url) no-repeat center;
+    background: #ededed var(--switch-bg-url) no-repeat center;
 
     position: absolute;
     z-index: 1;
